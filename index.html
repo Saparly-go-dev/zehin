@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <meta name="description" content="Türkmen dilinde 20 soragly interaktiw pikirleniş testi. Logika, matematika, şekiller we yzygiderlilikler.">
+  <title>Zehin — Pikirlenişiňi syna</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400&display=swap">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand" data-nav="home"><span class="brand-icon">z</span>zehin<span class="brand-dot">.</span></a>
+      <nav class="site-nav">
+        <button data-info="about">Test barada</button>
+        <button data-info="how">Nähili işleýär?</button>
+      </nav>
+      <span class="language">Türkmençe <span>TK</span></span>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="/" class="brand" data-nav="home"><span class="brand-icon">z</span>zehin<span class="brand-dot">.</span></a>
+          <p>Pikirlen. Baglanyşyklary tap.<br>Özüňi täze tarapdan tana.</p>
+        </div>
+        <div class="footer-links">
+          <h2>Saýt boýunça</h2>
+          <a href="/" data-nav="home">Baş sahypa</a>
+          <button data-info="about">Test barada</button>
+          <button data-info="how">Nähili işleýär?</button>
+          <a href="/design.html">Dizaýn ulgamy</a>
+        </div>
+        <div class="footer-links">
+          <h2>Pikirleniş ugurlary</h2>
+          <button data-category="0">Logiki pikirleniş</button>
+          <button data-category="1">Matematiki pikirleniş</button>
+          <button data-category="2">Şekilli pikirleniş</button>
+          <button data-category="3">Yzygiderlilik</button>
+        </div>
+        <div class="footer-about">
+          <span>20 SORAG · 15 MINUT</span>
+          <h2>Her sorag — täze garaýyş.</h2>
+          <p>Türkmen dilinde taýýarlanan interaktiw pikirleniş testi.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Zehin · Okuw maksatly taslama</span>
+        <button data-info="scoring">Netije nähili hasaplanýar?</button>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="dialog" class="dialog">
+    <button class="dialog-close" aria-label="Ýap">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <title>Zehin — Дизайн-система</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400&display=swap">
+  <script type="module" src="/src/design.js"></script>
+</head>
+<body>
+  <header class="site-header ds-header">
+    <div class="container">
+      <a href="/" class="brand"><span class="brand-icon">z</span>zehin<span class="brand-dot">.</span><span class="brand-tag">DESIGN</span></a>
+      <nav class="site-nav">
+        <a href="#palette">Палитра</a>
+        <a href="#type">Типографика</a>
+        <a href="#components">Компоненты</a>
+        <a href="/">Приложение →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="ds-intro">
+      <div>
+        <div class="eyebrow"><i></i> Дизайн-система · Zehin</div>
+        <h1>Тёмный интерфейс<br><span>с лаймовым <em class="accent">акцентом.</em></span></h1>
+        <p class="intro">Визуальный язык теста «Zehin — Pikirlenişiňi syna»: токены, шрифты и компоненты. Все элементы ниже — те же модули и стили, что использует приложение.</p>
+        <div class="facts"><span><b>6</b> цветов</span><i></i><span><b>3</b> шрифта</span><i></i><span><b>10+</b> компонентов</span></div>
+      </div>
+      <aside class="analysis" aria-label="Краткий анализ">
+        <h3>Принципы</h3>
+        <dl>
+          <dt>ЦВЕТ</dt><dd>Почти монохромная тёмно-зелёная гамма, один акцент — лайм #C4F578</dd>
+          <dt>ШРИФТ</dt><dd>Гротеск для заголовков, моноширинный для данных и меток, курсив-засечки как акцент</dd>
+          <dt>ФОРМА</dt><dd>Тонкие линии 1px, радиусы 4–14px, без теней на компонентах</dd>
+          <dt>ДВИЖЕНИЕ</dt><dd>Короткое появление снизу 0.25–0.5s, подъём кнопок на hover; учитывается reduced-motion</dd>
+          <dt>ОЦЕНКА</dt><dd>Условный IQ = 70 + 3 × верные ответы, процент — кольцом conic-gradient</dd>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="ds-block" id="palette">
+      <div class="ds-block-head">
+        <div><span class="ds-num">01 / ЦВЕТ</span><h2>Палитра</h2></div>
+        <p>Значения из <code>src/styles/tokens.css</code>. Нажмите на цвет, чтобы скопировать HEX.</p>
+      </div>
+      <div class="palette" data-swatches></div>
+    </section>
+
+    <section class="ds-block" id="type">
+      <div class="ds-block-head">
+        <div><span class="ds-num">02 / ШРИФТЫ</span><h2>Типографика</h2></div>
+        <p>Три гарнитуры с чёткими ролями плюс курсив Georgia как «живой» акцент в заголовках.</p>
+      </div>
+      <div class="type-grid">
+        <div class="type-card"><div class="type-card-sample" style="font:500 56px var(--font-display);letter-spacing:-3px">Aa</div><h3>Manrope</h3><p>Заголовки, логотип, крупные цифры результата. 500–800, трекинг до −3.5px.</p></div>
+        <div class="type-card"><div class="type-card-sample" style="font:500 56px var(--font-body)">Aa</div><h3>DM Sans</h3><p>Основной текст, кнопки, варианты ответов. 14–16px, межстрочный 1.5–1.9.</p></div>
+        <div class="type-card"><div class="type-card-sample" style="font:400 50px var(--font-mono)">Aa</div><h3>Space Mono</h3><p>Метки, таймер, номера вопросов, последовательности. 10–26px.</p></div>
+      </div>
+      <div class="type-scale">
+        <div class="type-row"><code>H1 · 66 / 500</code><div style="font:500 clamp(30px,4vw,56px)/1.1 var(--font-display);letter-spacing:-2.5px">Öz zehiniňe <em class="accent">täze garaýyş.</em></div></div>
+        <div class="type-row"><code>H2 · 25 / 500</code><div style="font:500 24px/1.5 var(--font-display);letter-spacing:-.6px">Yzygiderlilikde indiki san haýsy?</div></div>
+        <div class="type-row"><code>BODY · 16 / 400</code><div style="color:var(--muted);line-height:1.9">Baglanyşyklary tap. Kanunalaýyklygy gör. 20 sorag bilen pikirleniş ukybyňy syna.</div></div>
+        <div class="type-row"><code>LABEL · 11 MONO</code><div class="eyebrow" style="margin:0"><i></i> Pikirlenişiň täze ölçegi</div></div>
+        <div class="type-row"><code>DATA · 26 MONO</code><div style="font:26px var(--font-mono);color:#c4ed97;letter-spacing:5px">2 · 4 · 8 · 16 · ?</div></div>
+      </div>
+    </section>
+
+    <section class="ds-block" id="components">
+      <div class="ds-block-head">
+        <div><span class="ds-num">03 / UI</span><h2>Компоненты</h2></div>
+        <p>Все элементы интерактивны: выбирайте ответы, двигайте ползунок, запускайте таймер и открывайте диалоги.</p>
+      </div>
+      <div class="comp-grid">
+        <div class="comp">
+          <h3>Кнопки · .btn</h3>
+          <div class="row">
+            <button class="btn btn-primary">Testi başla</button>
+            <button class="btn btn-secondary">Öňki sorag</button>
+            <button class="btn btn-primary" disabled>Disabled</button>
+          </div>
+          <p class="ds-note">.BTN-PRIMARY · .BTN-SECONDARY · :DISABLED</p>
+        </div>
+        <div class="comp">
+          <h3>Таймер · .timer</h3>
+          <div class="row row--between">
+            <div class="timer" data-demo-timer-wrap><small>Galan wagt</small><span data-demo-timer>02:10</span></div>
+            <button class="btn btn-secondary" data-demo-timer-btn>Запустить</button>
+          </div>
+          <p class="ds-note">МЕНЕЕ 2 МИНУТ → .IS-URGENT (#F2B480)</p>
+        </div>
+        <div class="comp comp--wide">
+          <h3>Вопрос с вариантами · .answer</h3>
+          <div data-demo-question></div>
+          <p class="feedback" data-demo-feedback role="status">Saýlaň: bir dogry jogap bar.</p>
+        </div>
+        <div class="comp">
+          <h3>Прогресс · .progress</h3>
+          <div class="progress-info"><span data-pg-label></span><span data-pg-count></span></div>
+          <div class="progress"><span data-pg-bar></span></div>
+          <div class="row" style="margin-top:18px"><button class="btn btn-secondary" data-pg="-1" aria-label="Меньше">−</button><button class="btn btn-secondary" data-pg="1" aria-label="Больше">+</button></div>
+        </div>
+        <div class="comp">
+          <h3>Навигация · .question-numbers</h3>
+          <div class="question-numbers" data-demo-nums></div>
+          <div class="legend"><span><i></i>Пустой</span><span><i class="is-answered"></i>Отвечен</span><span><i class="is-current"></i>Текущий</span></div>
+        </div>
+        <div class="comp comp--wide">
+          <h3>Кольцо результата · .score-ring</h3>
+          <div class="row" style="gap:30px">
+            <div class="score-ring" data-ring><div class="score-value"><strong data-ring-iq></strong><small>ŞERTLI IQ</small></div></div>
+            <div class="range">
+              <label for="ring-range">Верных ответов: <b data-ring-n style="color:var(--lime)"></b> / 20</label>
+              <input type="range" id="ring-range" min="0" max="20" value="13">
+              <p class="ds-note">CONIC-GRADIENT · IQ = 70 + 3 × N</p>
+            </div>
+          </div>
+        </div>
+        <div class="comp comp--wide">
+          <h3>Карточки направлений · .category</h3>
+          <div data-demo-categories></div>
+        </div>
+        <div class="comp comp--wide">
+          <h3>Диалоги · &lt;dialog&gt;</h3>
+          <div class="row">
+            <button class="btn btn-secondary" data-demo-confirm>Подтверждение выхода</button>
+            <button class="btn btn-secondary" data-demo-info="about">Test barada</button>
+            <button class="btn btn-secondary" data-demo-info="scoring">Netije nähili hasaplanýar?</button>
+          </div>
+          <p class="ds-note">BACKDROP-FILTER: BLUR(7PX) · ESC ЗАКРЫВАЕТ</p>
+        </div>
+      </div>
+
+      <div class="ds-cta">
+        <div><h3>Посмотреть в работе</h3><p>Полный тест: 20 вопросов, таймер 15 минут, страница результата.</p></div>
+        <a class="btn btn-primary" href="/">Открыть приложение</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+        <span>© 2026 Zehin · Okuw maksatly taslama</span>
+        <span>Дизайн-система v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="dialog" class="dialog">
+    <button class="dialog-close" aria-label="Ýap">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>

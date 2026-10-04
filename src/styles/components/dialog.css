@@ -1,0 +1,29 @@
+.dialog {
+  width: min(500px, calc(100% - 30px));
+  border: 1px solid #4a603c; border-radius: 12px;
+  background: #1c291c; color: #d2e4c1;
+  padding: 32px;
+  box-shadow: 0 20px 100px #0007;
+}
+.dialog::backdrop { background: #071009cc; backdrop-filter: blur(7px); }
+.dialog h2 { font: 500 25px var(--font-display); margin: 8px 0 0; }
+.dialog p { font-size: 15px; line-height: 1.9; color: #9caf90; }
+.dialog-close {
+  position: absolute; right: 14px; top: 12px;
+  border: 0; background: none; color: #adc299; font-size: 27px;
+}
+.dialog-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 25px; flex-wrap: wrap; }
+
+.practice { margin-top: 25px; padding-top: 20px; border-top: 1px solid #405535; }
+.practice-label { font: 10px var(--font-mono); color: #9ab386; letter-spacing: .5px; }
+.practice h3 { font-size: 18px; line-height: 1.7; font-weight: 500; margin: 15px 0; }
+.practice .answers { grid-template-columns: 1fr; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 26px; z-index: 50;
+  transform: translate(-50%, 20px);
+  background: var(--lime); color: #22321b;
+  font: 12px var(--font-mono); padding: 10px 16px; border-radius: var(--r-md);
+  opacity: 0; transition: .25s; pointer-events: none;
+}
+.toast.is-visible { opacity: 1; transform: translate(-50%, 0); }

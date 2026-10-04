@@ -1,0 +1,33 @@
+:root {
+  /* Colors */
+  --bg: #101715;
+  --panel: #19221e;
+  --panel-2: #17201b;
+  --line: #303a33;
+  --lime: #c4f578;
+  --lime-hover: #d5ffa0;
+  --lime-ink: #26331f;
+  --text: #f1f4ec;
+  --muted: #939f96;
+  --warn: #f2b480;
+
+  /* Typography */
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-accent: Georgia, serif;
+
+  /* Radii */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 14px;
+
+  /* Layout */
+  --container: 1400px;
+  --gutter: 60px;
+}
+
+@media (max-width: 1100px) { :root { --gutter: 35px; } }
+@media (max-width: 780px)  { :root { --gutter: 24px; } }
+@media (max-width: 520px)  { :root { --gutter: 16px; } }

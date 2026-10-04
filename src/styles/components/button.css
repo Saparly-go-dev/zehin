@@ -1,0 +1,17 @@
+.btn {
+  border: 0;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  padding: 16px 25px;
+  font-size: 14px;
+  transition: transform .2s, background .2s;
+}
+.btn-primary { background: var(--lime); color: var(--lime-ink); }
+.btn-primary:hover { background: var(--lime-hover); transform: translateY(-2px); }
+.btn-secondary { background: #263129; color: #c2cec0; border: 1px solid #3c493b; }
+.btn-secondary:hover { background: #354231; }
+.btn:disabled { cursor: default; opacity: .4; transform: none; }
+
+@media (max-width: 520px) {
+  .btn-sm-mobile { font-size: 12px; padding: 13px 14px; }
+}
